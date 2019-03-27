@@ -1,33 +1,19 @@
-# Sales Admin
+# README
 
-## Background
+This is a simple application that imports a CSV and displays sales data.
 
-Your company just acquired Acme Cult Hero Supplies. They have been using a CSV worksheet to track sales data, and you need to transform that into a web application to track revenue.
+Ruby Version - 2.5.1
+Rails Version - 5.2.2
 
-## Functional requirements
+Please run a `bundle install` to get the necessary dependencies.  Then a `rake db:setup` and a `rake db:migrate`
 
-Using the web framework of your choice (bearing in mind that Rails is what we know best), deliver an application that meets the following requirements:
+### Quick Explination
+I timeboxed this exercise to around 3 hours and made as many improvements as I could while adhering to the accpetance criteria.
+Some other things I would have added if I had more time.
 
-* Provides an interface for a user to upload the salesdata.csv file in this directory
-* Parses and stores the information in the salesdata.csv file
-* Calculates and displays the total sales revenue to the user
+* Sad path testing for CSV uploading.  CSV data is almost always broken so could use some validation around that.
+* Authentication
+* There seems like a decent argument that there could be a `customers` table and a `merchants` table since all that lives on the `items` table.
+* The sales report page could use some more useful info like quantity of each item, subtotal of items etc.
 
-Bonus points if you add authentication.
 
-_Ideally you shouldn't spend more than 4-5 hours on your solution, but take as much time as you want._
-
-## Delivery requirements
-
-Please provide instructions for installing and running your application, including all dependencies. The simpler, the better.
-
-Think about things like:
-
-* Testing
-* How to store the data
-* How would your solution differ if it had to scale?
-
-Please submit your solution as a pull request, or package it up and send it to doug@qedinvestors.com.
-
-## Credits
-
-Yes, this challenge is copied from the LivingSocial code challenge. I helped put that together, so hopefully nobody will mind that much.

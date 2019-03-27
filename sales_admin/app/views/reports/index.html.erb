@@ -1,0 +1,20 @@
+<h1>All Sales Reports</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Date Uploaded</th>
+      <th>Number of items</th>
+    </tr>
+  </thead>
+  <tbody>
+    <%- @reports.each do |report| -%>
+      <tr>
+        <td><%= link_to "Sales Report #{report.id}", report_path(report.id) %></td>
+        <td><%= report.created_at %></td>
+        <td><%= report.items.count %></td>
+      </tr>
+    <%- end -%>
+  </tbody>
+</table>

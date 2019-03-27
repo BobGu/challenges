@@ -1,0 +1,14 @@
+<h1><%= "Sales Report #{@report.id}"%></h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Total Revenue</th>
+      <th>Number of items</th>
+    </tr>
+  </thead>
+  <tbody>
+    <td><%= number_to_currency(@report.total_revenue)%></td>
+    <td><%= @report.items.count %></td>
+  </tbody>
+</table>

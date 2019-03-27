@@ -1,0 +1,12 @@
+<h1>Upload sales report</h1>
+<br/>
+<%= form_tag(reports_path, multipart: true, class: 'form-group form-cushion', role: 'form') do %>
+  <div>
+    <%= label_tag 'csv_batch_file', 'Select sales file' %>
+    <small id='fileHelp' class="form-text text-muted">
+      This will create a sales report form a CSV file 
+    </small>
+    <%= file_field_tag 'csv_batch_file', class: 'form-control' %>
+    <%= button_tag 'upload sales file', class: 'btn btn-primary' %>
+  </div>
+<% end %>
